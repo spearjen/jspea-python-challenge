@@ -57,7 +57,7 @@ with open(csvpath,"r") as csvfile:
         currencychangetotal = "${:,.2f}".format(changetotal/(lines-1))     
         currencyhigh = "${:,.2f}".format(currenthighchange)
         currencylow = "${:,.2f}".format(currentlowchange)
-        
+
     data = (f"There are {lines} months of data contained in the dataset.\n"
             f"The total profit/loss for all months and years in the dataset is: {currencytotal}.\n"
             f"The average profit/loss change between months in the dataset is: {currencychangetotal}.\n"
@@ -71,4 +71,6 @@ with open(csvpath,"r") as csvfile:
     outputfile = os.path.join ("..","Analysis","bank_final.txt")
     with open(outputfile, "w") as bank_final:
         bank_final.write(data)
+    
+    #completed
         
